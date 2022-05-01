@@ -16,6 +16,12 @@
   },
   "devDependencies": {
     "@smui/button": "*",
+    "@smui/card": "*",
+    "@smui/drawer": "*",
+    "@smui/icon-button": "*",
+    "@smui/layout-grid": "*",
+    "@smui/list": "*",
+    "@smui/top-app-bar": "*",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
@@ -25,11 +31,16 @@
     "eslint-plugin-svelte3": "^3.2.1",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
+    "smui-theme": "*",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.6",
     "svelte-preprocess": "^4.10.1",
     "tslib": "^2.3.1",
     "typescript": "~4.6.2"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@smui-extra/accordion": "*",
+    "svelte-material-ui": "*"
+  }
 }

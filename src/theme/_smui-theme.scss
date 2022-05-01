@@ -2,24 +2,47 @@
 
 @use '@material/theme/color-palette';
 
+// Delta logo blue: #009fe8
+// Navigation header text: #00aeef
+// Delta link blue: #00aeef
+// Delta text headline blue: #408ab4
+// Delta footer grey: #6d6e71
+
 // Svelte Colors!
 @use '@material/theme/index' as theme with (
-  $primary: #ff3e00,
+  $primary: #009fe8,
+  $on-primary: #fff,
   $secondary: #676778,
   $surface: #fff,
   $background: #fff,
-  $error: color-palette.$red-900
+  $error: color-palette.$red-900,
 );
+
+@use '@material/layout-grid/index' with (
+  $max-width: 1024px
+);
+
+@use "@material/top-app-bar";
+
+.mdc-top-app-bar.my-bar {
+  @include top-app-bar.fill-color(theme.$surface);
+  @include top-app-bar.icon-ink-color(theme.$primary);
+  border-bottom: 1px solid #ebecee;
+  &.top {
+    z-index: 7;
+  }
+};
 
 html,
 body {
   background-color: theme.$surface;
   color: theme.$on-surface;
+  --mdc-typography-button-text-transform: none;
 }
 
 a {
-  color: #40b3ff;
+  color: #00aeef;
 }
 a:visited {
-  color: color.scale(#40b3ff, $lightness: -35%);
+  color: color.scale(#00aeef, $lightness: -35%);
 }
